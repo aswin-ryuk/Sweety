@@ -18,6 +18,9 @@ For Future Enhancement
 * Authorization for doctor role need to be defind
 * Small modification is need in report generation UI page.
 
+Rspec Testcase Evidence
+![rspec result](https://github.com/aswin-ryuk/Sweety/blob/master/public/Testcase%20results.PNG)
+
 # Hosted in Heroku
 
 * Please use the link to preview the application -  https://sweetiee.herokuapp.com/
