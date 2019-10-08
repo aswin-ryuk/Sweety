@@ -6,34 +6,18 @@ List of gems used in the application
 
 * Authentication     - Devise 
 * Authorization      - cancacan
-* chart              - highchart
-* Pdf generation     - Prawn, Prawn-table
+* Chart              - highchart
 * Pagination         - Will paginate
 * UI design          - Bootstrap4, bootbox, Jquery
-* form               - Simple form
+* Form               - Simple form
+* Testing            - Rspec
 
-List of functionalities implemented in the aplication
+For Future Enhancement
 
-* All UI designs are done using bootstrap4.
-* Form designs are done using simple form.
-* Bootstrap Datepicker
-* Bootstrap Dropdown filter.
-* bootbox conformation.
-* Modal window.
-* User Feedback.
-* Jquery sortable.
-* Ajax
-* CSV file download.
-* PDF file download.
-* Chart representation.
-* Rake task.
-* Table migrations.
-* Associations.
-* REST Resources.
-* Model concerns.
-* Callbacks and Filters.
-* Mixin.
+* Role - 'Doctor' needs to be added
+* Authorization for doctor role need to be defind
+* Small modification is need in report generation UI page.
 
 # Hosted in Heroku
 
-* Please use the link to preview the application -  https://ror-mini-application.herokuapp.com
+* Please use the link to preview the application -  https://sweetiee.herokuapp.com/

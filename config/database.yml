@@ -4,14 +4,14 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: ec2-174-129-227-205.compute-1.amazonaws.com
+  host: ec2-54-83-33-14.compute-1.amazonaws.com
   port: 5432
-  username: deextpoqsppobm
-  password: 2ad4920ed41ff6797e1ce5c62ce2e58041e7d4d8303345e6a78bad01c2ab95a5
+  username: digruyucumsiyq
+  password: 8c8b841d62b9598dddb9e64aef0098f9eb992b4fe24cd385aeb41a74a4ecc4cc
 
 development:
   <<: *default
-  database: d3mdlf50tjsrn0
+  database: d9e7t7ojnhrmb7
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -45,7 +45,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: d3mdlf50tjsrn0
+  database: d9e7t7ojnhrmb7
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
