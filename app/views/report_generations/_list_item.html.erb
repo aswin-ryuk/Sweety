@@ -1,0 +1,5 @@
+<tr>
+    <td><%= list_item.try(:user).try(:username) %></td>
+    <td><%= list_item.glucose_level %></td>
+    <td><%= list_item.created_at.strftime('%d-%m-%Y') %></td>
+</tr>

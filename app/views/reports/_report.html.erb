@@ -1,0 +1,7 @@
+<tr>
+    <td><%= report.user.username %></td>
+    <td><%=link_to report.glucose_level, reports_path(id: report.id), {data: {toggle: "tooltip", title: "edit"} } %></td>
+    <td><%= report.created_at.strftime('%d-%m-%Y %H:%M:%S') %></td>
+    <td style="text-align: center"><%= link_to(image_tag( "reject", 
+	{alt: "", align: "middle", border: "0", size: "20x20" }) + "", 'javascript:void(0);', data: {toggle: "tooltip", title: "delete", confirmmessage: 'Are you sure, do you want to delete the record', url: destroy_record_reports_path(id: report.id)}, class: 'bootstrap_confirm' ) %></td>
+</tr>

@@ -1,0 +1,7 @@
+<tr>
+	<% if defined?(header) and !header.blank? %>  
+		<%eval(header).each do |c|%>
+			<th><%=c[:label]%></th>
+		<%end%>
+	<%end%>
+</tr>

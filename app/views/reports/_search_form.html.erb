@@ -1,0 +1,31 @@
+<%= simple_form_for( @report ,html: {autocomplete: "off", id: 'reports_search_form',name: 'reports_search_form', class: 'form-horizontal custom-search-form'}) do |f|%>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <%= '<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Add Glucose Level'.html_safe %>
+  </div>
+  <div class='panel-body'>
+    <div class="row">
+      <div class="col-md-5">
+        <%= f.input :glucose_level, label: 'Glucose Level' %>
+      </div>
+      <div class="col-md-5">
+      <%= f.input :created_at, as: :string, label: 'Date', input_html: {class: 'j_datetimepicker', data: {target: ".j_datetimepicker", toggle: "datetimepicker" }, value: ( @report.try(:created_at).try(:strftime,'%d-%m-%Y %H:%M:%S')  if @report.present? ) } %> 
+      </div>
+      <div class="col-md-2 img-responsive">
+        <%= f.submit submit_btn_text(f.object) , class: 'btn btn-primary submit-button' %>
+      </div> 
+    </div> 
+  </div>
+</div>
+<% end %>
+
+<script type="text/javascript">
+  $(function () {
+      $('.j_datetimepicker').datetimepicker({
+          maxDate: 'now',
+          format: 'DD/MM/YYYY HH:mm A'
+      });
+  });
+</script>
+
+

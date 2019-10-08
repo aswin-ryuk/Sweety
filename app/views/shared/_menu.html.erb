@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <span class="navbar-brand" >  
+    <i class="fa fa-bars" aria-hidden="true"></i> Menu
+  </span>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item  <%= 'active' if current_page?(reports_path)%> ">
+      <%= link_to 'Reports', reports_path, class: 'nav-link'  %>
+    </li>
+    <li class="nav-item  <%= 'active' if current_page?(report_generations_path)%> ">
+      <%= link_to 'Report Generations', report_generations_path, class: 'nav-link'  %>
+    </li>
+    <li class="nav-item  <%= 'active' if current_page?(abouts_path)%> ">
+      <%= link_to 'About', abouts_path, class: 'nav-link'  %>
+    </li>
+  </ul>
+   <ul class="navbar-nav ml-auto">
+    <% if user_signed_in? %>
+      <span class="navbar" style="color: white; ">
+        Logged in as:&nbsp; <%= current_user.username %></span>&nbsp;
+      <%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit profile'.html_safe, edit_user_registration_path, class: "btn btn-warning" %>&nbsp;|&nbsp;
+      <%= link_to '<i class="fa fa-sign-out" aria-hidden="true"></i> Logout'.html_safe, destroy_user_session_path, method: :delete, class: " btn btn-danger" %>
+    <% else %>
+      <%= link_to '<i class="fa fa-sign-in" aria-hidden="true"></i> Sign up'.html_safe, new_user_registration_path, class: "btn btn-warning" %>&nbsp;|&nbsp;
+      <%= link_to '<i class="fa fa-pencil-square-o" aria-hidden="true"></i> Login'.html_safe, new_user_session_path, class: " btn btn-warning" %>
+    <% end %>
+  </ul>
+</nav>
+<br>

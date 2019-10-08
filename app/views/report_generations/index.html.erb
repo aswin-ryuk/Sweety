@@ -1,0 +1,20 @@
+<% title = "Report Generation" %>
+
+<%= render partial: 'shared/display_title_btns', locals: {title: title} %>
+
+<%= simple_form_for(:report, url: generate_report_report_generations_path,  wrapper: :horizontal_form, html: {autocomplete: "off", class: 'form-horizontal custom-form' }) do |f|%>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <i class="fa fa-pencil-square-o" aria-hidden="true"></i><b> Generate </b>
+  </div>
+  <div class="panel-body">
+    <%= f.input :type, label: 'Report Type', collection: ReportGeneration::TYPES %>
+
+    <%= f.input :date, as: :string,  input_html: { readonly: true , class: 'jquery_date'} %>
+
+    <%= f.submit :submit , class: 'btn btn-primary submit-button'%>
+  </div>
+</div>
+
+<% end %>

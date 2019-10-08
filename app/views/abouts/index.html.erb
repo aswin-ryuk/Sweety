@@ -1,0 +1,27 @@
+<%= render partial: 'shared/display_title_btns', locals: {title: "Application Details"} %>
+
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<span class="glyphicon glyphicon-edit"></span> &nbsp; <b> <%= params[:action].capitalize %> </b>
+	</div>
+	<div class="panel-body" style="margin-left: 15%">
+
+		<h5>This application is developed using rails version 5.1 and ruby version 2.3. </h5>
+
+		<h5>List of gems used in the application</h5>
+		<ul>
+		<li> Authentication     - Devise </li>
+		<li> Authorization      - cancacan</li>
+		<li> chart              - highchart</li>
+		<li> Pagination         - Will paginate</li>
+		<li> UI design          - Bootstrap4, bootbox, Jquery</li>
+		<li> Form               - Simple form</li>
+		<li> Testing            - Rspec </li>
+		</ul>
+		<h5>For Future Enhancement</h5>
+		<ul>
+		<li> Role - 'Doctor' needs to be added</li>
+		<li> Authorization for doctor role need to be defind </li>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,10 @@
+<% if list_object.present? && list_object.size > 0 %>
+	<div class="footer-pagination">
+		<%= will_paginate list_object %>
+	</div>
+		<div class="text-center"><%= page_entries_info list_object, entry_name: 'items' %></div>
+<% else %>
+	<div class="text-center">
+	  	<%= t('common.no_records')%>
+	</div>
+<% end %>

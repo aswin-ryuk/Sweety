@@ -1,0 +1,17 @@
+<% title = get_title(@report_type)%>
+
+<%= render partial: 'shared/display_title_btns', locals: {title: title, csv: true, back: true} %>
+
+<div style="margin-left: 50px">	
+	<li><strong> Maximum Glucose level: <%= @report_max_g_level %></strong> </li> 
+	<li><strong> Minimum Glucose level: <%= @report_min_g_level %></strong> </li> 
+	<li><strong> Average Glucose level: <%= @report_avg_g_level %></strong> </li> <br>
+</div>
+
+<fieldset class="custom_fieldset">
+	<%= line_chart @data , xtitle:  'Date', ytitle: 'Glucose level'  %>
+</fieldset>
+
+<div id="<%= params[:controller]%>_div">
+  <%= render partial: 'report_generations/list', locals: { list_items: @result} %>
+</div>

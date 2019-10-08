@@ -1,0 +1,9 @@
+<% title = t('common.listing_page',model_name: Report.model_name.human.pluralize) %>
+
+<%= render partial: 'shared/display_title_btns', locals: {title: title} %>
+
+<%= render 'search_form' %>
+
+<div id="<%= params[:controller]%>_div">
+  <%= render 'list' %>
+</div>
