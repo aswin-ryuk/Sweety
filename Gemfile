@@ -33,7 +33,7 @@ gem 'mini_racer', platforms: :ruby
 gem 'execjs'
 
 gem 'bootstrap', '~> 4.0'
-gem 'simple_form', '~> 3.5'
+gem 'simple_form', '~> 5.0'
 gem 'country_select'
 gem 'pry'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
