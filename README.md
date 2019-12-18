@@ -1,26 +1,51 @@
-# About Application
+# Sweety
 
-This application is developed using rails version 5.1 and ruby version 2.3.
+Sweety is a simple web application which enables a user to input and 
+track blood glucose readings and view reports on those readings.
 
-List of gems used in the application
+### Users
 
-* Authentication     - Devise 
-* Authorization      - cancacan
-* Chart              - highchart
-* Pagination         - Will paginate
-* UI design          - Bootstrap4, bootbox, Jquery
-* Form               - Simple form
-* Testing            - Rspec
+The typical user of the Sweety application is a diabetes patient who is 
+checking his or her blood glucose levels several times a day. These 
+individuals are looking for a method to keep track of their readings 
+on a daily basis and examine monthly trends.
 
-For Future Enhancement
+In the future, doctors may also have access to this application to 
+review patient entered blood glucose levels and review the same daily 
+and monthly data.
 
-* Role - 'Doctor' needs to be added
-* Authorization for doctor role need to be defind
-* Small modification is need in report generation UI page.
+### Functionality
+
+The applications functionality relates to two core features: entering 
+blood glucose level readings and view reports on those readings.
+
+### Data Entry
+A user should be able to enter data up to four times per day. Data is 
+entered as a single integer value representing blood glucose levels 
+(measured in mg/dl). Data should be validated to ensure that a level is 
+included in the entry and that there are no more than 4 entries on a given day.
+
+### Data entry
+4x a day
+
+### Reports
+
+A user should be able to view reports of their data. There are three 
+kinds of reports: daily report, month to date report, and monthly 
+report. With a date selector, the user should be able to select the 
+end date of the report. For daily reports, data will represent entries 
+from that day. For month to date reports, data will start on the first 
+of the month for the selected date and end on that date. For monthly 
+reports, reports will include data spanning the month the previous monthly period.
+
+Reports should include three data points: a maximum reading from the time 
+period, a minimum reading for the time period, and an average of the whole 
+data set for the period.
+
+# Solution - Hosted in Heroku
+
+* Please use the link to preview the application -  https://ror-mini-application.herokuapp.com
 
 Rspec Testcase Evidence
+
 ![rspec result](https://github.com/aswin-ryuk/Sweety/blob/master/public/Testcase%20results.PNG)
-
-# Hosted in Heroku
-
-* Please use the link to preview the application -  https://sweetiee.herokuapp.com/
