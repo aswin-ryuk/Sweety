@@ -80,5 +80,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'prawn', '~> 2.1'
 gem 'prawn-table', '~> 0.2.2'
 
- gem 'chartkick', '2.2.5'
+ gem 'chartkick', '3.4.0'
  gem 'highcharts_rails'
